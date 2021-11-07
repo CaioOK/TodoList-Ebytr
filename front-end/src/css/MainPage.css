@@ -1,0 +1,18 @@
+#main-page {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  background-color: rgb(99, 160, 160);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+#tasks-lobby {
+  margin-top: 2vh;
+  width: 85vw;
+  height: auto;
+  min-height: 78vh;
+  background-color: black;
+  border-radius: 6px;
+}
