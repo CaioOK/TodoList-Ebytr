@@ -3,12 +3,15 @@ import { render } from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Provider from './context/Provider';
 
 const rootElement = document.getElementById('root');
 
 render(
   <React.StrictMode>
-    <App />
+    <Provider>
+      <App />
+    </Provider>
   </React.StrictMode>,
   rootElement,
 );

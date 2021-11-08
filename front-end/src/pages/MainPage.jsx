@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from '../components/Header';
-import { TASKS_DATA } from '../tasksMock';
 import '../css/MainPage.css';
 import TasksLobby from '../components/TasksLobby';
+import TasksContext from '../context/TasksContext';
 
 function MainPage() {
-  const [tasksData, setTasksData] = useState(TASKS_DATA);
+  // const [tasksData, setTasksData] = useState(TASKS_DATA);
+  const { tasksData } = useContext(TasksContext);
 
   return(
     <div id='main-page'>
