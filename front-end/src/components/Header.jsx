@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../css/Header.css';
 
 function Header() {
@@ -8,6 +9,7 @@ function Header() {
     status: false,
   };
   const [statusCheckboxes, setStatusCheckboxes] = useState(initialChecked);
+  const navigate = useNavigate();
 
   function handleChange({ target : { name, checked } } ) {
     setStatusCheckboxes({ ...initialChecked, [name]: checked });
@@ -54,13 +56,30 @@ function Header() {
 
       <form id='search-bar-form'>
         <div>
-          <input type='button' id='new-task-btn' value='Nova Tarefa' />
-          <input type='button' id='show-tasks-btn' value='Listar Tarefas' />
+          <input
+           type='button'
+           id='new-task-btn'
+           value='Nova Tarefa' 
+          />
+          <input
+            type='button'
+            id='show-tasks-btn'
+            onClick={ () => navigate('/tasks') }
+            value='Listar Tarefas'
+          />
         </div>
 
         <div>
-          <input type='text' id='search-bar' placeholder='Pesquisar' />
-          <input type='button' id='search-btn' value='🔍' />
+          <input
+            type='text'
+            id='search-bar'
+            placeholder='Pesquisar'
+          />
+          <input
+           type='button'
+           id='search-btn'
+           value='🔍'
+          />
         </div>
       </form>
     </header>

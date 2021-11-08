@@ -1,0 +1,50 @@
+.task-field {
+  margin-top: 2vh;
+  width: 70vw;
+  height: 15vh;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+.task-field:hover {
+  height: 30vh;
+  transition: 300ms;
+}
+
+.task-field:not(:hover) {
+  height: 15vh;
+  transition: 300ms;
+}
+
+.task-field button {
+  background-color: inherit;
+  border: 0;
+  font-size: 4vh;
+  opacity: 0.6;
+}
+
+.task-field button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.task-field button:active {
+  transform: scale(0.9);
+}
+
+.task-field p {
+  max-width: 45vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task-field:hover p {
+  white-space: normal;
+  overflow-x: visible;
+  text-overflow: clip;
+}
