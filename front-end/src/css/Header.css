@@ -23,13 +23,6 @@
 
 #search-bar-form > div > input[type=button]:hover {
   cursor: pointer;
-  transform: scale(1.05);
-  transition: 300ms;
-  box-shadow: 2px 1px rgb(31, 30, 30);
-}
-
-#search-bar-form > div > input[type=button]:not(:hover)  {
-  transition: 400ms;
 }
 
 #new-task-btn {
@@ -64,4 +57,8 @@
 #search-btn {
   width: 3vw;
   height: 5vh;
+}
+
+#xablutton {
+  background-color: red;
 }
