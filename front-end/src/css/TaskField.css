@@ -5,9 +5,16 @@
   border-radius: 15px;
   background-color: white;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
+}
+
+.task-field > div {
+  display: flex;
+  justify-content: space-between;
+  width: 6vw;
+  margin-right: 5vw;
 }
 
 .task-field:hover {
@@ -38,6 +45,7 @@
 
 .task-field p {
   max-width: 45vw;
+  margin-left: 10vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

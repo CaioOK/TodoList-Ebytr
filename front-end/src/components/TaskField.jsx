@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../css/TaskField.css';
 
-function TaskField({ task }) {
+function TaskField({ task, id }) {
+  const navigate = useNavigate();
+
+  function handleClickEdit() {
+    navigate(`/task-editor/${id}`);
+  }
+
   return(
     <section className='task-field'>
       <p>{ task }</p>
@@ -10,6 +17,7 @@ function TaskField({ task }) {
           type='button'
           id='edit-task-btn'
           title='Editar tarefa'
+          onClick={ handleClickEdit }
         >
           📝
         </button>

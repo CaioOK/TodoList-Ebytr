@@ -4,7 +4,9 @@ import TaskField from './TaskField';
 function TasksLobby({ tasksData }) {
   return (
     <>
-      { tasksData.map(({ task, _id }) => <TaskField key={ _id } task={ task } /> ) }
+      { tasksData.map(({ task, _id }) => (
+        <TaskField key={ _id } id={ _id } task={ task } />
+      )) }
     </>
   );
 }

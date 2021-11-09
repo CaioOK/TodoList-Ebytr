@@ -64,7 +64,7 @@ function Header() {
           <input
             type='button'
             id='show-tasks-btn'
-            onClick={ () => navigate('/tasks') }
+            onClick={ () => navigate('/') }
             value='Listar Tarefas'
           />
         </div>

@@ -4,9 +4,9 @@ import Header from '../components/Header';
 import '../css/MainPage.css';
 import TasksLobby from '../components/TasksLobby';
 import TasksContext from '../context/TasksContext';
+import TaskEditor from '../components/TaskEditor';
 
 function MainPage() {
-  // const [tasksData, setTasksData] = useState(TASKS_DATA);
   const { tasksData } = useContext(TasksContext);
 
   return(
@@ -15,7 +15,7 @@ function MainPage() {
       <main id='tasks-lobby'>
         <Routes>
           <Route index element={ <TasksLobby tasksData={ tasksData } /> } />
-          <Route path='tasks' element={ <TasksLobby tasksData={ tasksData } /> } />
+          <Route path='task-editor/:taskId' element={ <TaskEditor /> } />
         </Routes>
       </main>
     </div>
