@@ -19,7 +19,6 @@ function TaskEditor() {
   function handleClickSaveBtn() {
     const tasksDataCopy = [...tasksData];
     setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
 
     if (isEditingATask) {
       const taskIndex = tasksData.findIndex((task) => task['_id'] === taskId);
@@ -27,7 +26,11 @@ function TaskEditor() {
       return setTasksData(tasksDataCopy);
     }
 
-    tasksDataCopy.push({ _id: Math.random(), task: textAreaValue, status: 'pending' });
+    tasksDataCopy.push({
+      _id: JSON.stringify(Math.random()),
+      task: textAreaValue,
+      status: 'pending',
+    });
 
     setTasksData(tasksDataCopy);
   }

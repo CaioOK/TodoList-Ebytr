@@ -59,7 +59,8 @@ function Header() {
           <input
            type='button'
            id='new-task-btn'
-           value='Nova Tarefa' 
+           value='Nova Tarefa'
+           onClick= { () => navigate('/task-editor/create') }
           />
           <input
             type='button'
