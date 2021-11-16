@@ -12,6 +12,8 @@ function TaskEditor() {
   const [textAreaValue, setTextAreaValue] = useState(taskText);
   const [saved, setSaved] = useState(false);
 
+  console.log('taskId: ', taskId, 'taskText: ', taskText, 'textArea: ', textAreaValue);
+  
   function handleChange({ target: { value } }) {
     setTextAreaValue(value);
   }
