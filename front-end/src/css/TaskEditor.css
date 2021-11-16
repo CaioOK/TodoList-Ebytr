@@ -1,0 +1,45 @@
+#task-editor {
+  width: 100%;
+  height: 78vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#task-editor > form {
+  width: 60vw;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+}
+
+#task-editor button {
+  margin-top: 1vh;
+  width: 9vw;
+  height: 5vh;
+  background-color: green;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+}
+
+#task-editor button:hover {
+  cursor: pointer;
+}
+
+#task-editor textarea {
+  margin-top: 8vh;
+  width: 35vw;
+  height: 35vh;
+}
+/* 
+#task-editor span {
+  display: none;
+}
+
+#task-editor button:active + span {
+  display: block;
+} */
